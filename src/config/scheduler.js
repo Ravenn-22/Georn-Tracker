@@ -5,7 +5,7 @@ import { sendFollowUpReminder, sendDeadlineReminder } from "./email.js";
 
 const scheduleReminders = () => {
   // Runs every day at 8:00 AM
-  cron.schedule("0 8 * * *", async () => {
+  cron.schedule("* * * * *", async () => {
     console.log("Running daily reminder check...");
 
     try {
