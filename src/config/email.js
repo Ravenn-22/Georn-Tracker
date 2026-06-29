@@ -15,7 +15,7 @@ export const sendFollowUpReminder = async ({
     to: [{ email: to }],
     sender: { name: "Georn", email: "georn.tracker@gmail.com" },
     subject: `Reminder: Follow up with ${company}`,
-    html: `
+    htmlContent: `
       <div style="font-family: DM Sans, sans-serif; max-width: 560px; margin: 0 auto; padding: 2rem;">
         <h2 style="font-family: Georgia, serif; color: #1E293B;">Hey ${name} 👋</h2>
         <p style="color: #475569; line-height: 1.6;">
@@ -61,7 +61,7 @@ export const sendDeadlineReminder = async ({
     to: [{ email: to }],
     sender: { name: "Georn", email: "georn.tracker@gmail.com" },
     subject: `Deadline Tomorrow: ${role} at ${company}`,
-    html: `
+    htmlContent: `
       <div style="font-family: DM Sans, sans-serif; max-width: 560px; margin: 0 auto; padding: 2rem;">
         <h2 style="font-family: Georgia, serif; color: #1E293B;">Heads up, ${name} ⏰</h2>
         <p style="color: #475569; line-height: 1.6;">
