@@ -57,7 +57,8 @@ export const sendDeadlineReminder = async ({
     apiKey: process.env.BREVO_API_KEY,
   });
 
-  await client.transactionalEmails.sendTransacEmail({
+ await client.transactionalEmails.sendTransacEmail({
+    to: [{ email: to }],
     sender: { name: "Georn", email: "georn.tracker@gmail.com" },
     subject: `Deadline Tomorrow: ${role} at ${company}`,
     html: `
